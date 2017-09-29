@@ -1,0 +1,6 @@
+PID Reflection
+
+The PID algorithm is rather simple and prone to initial conditions. The speed PID controller is a good example of limitations. If the target speed is 40 mph and the initial speed is zero, then the integral gain can cause speed to overshoot if integral gains is not decreased. Proportional gain causes the car to oscillate around cross-track error like expected. I could increase derivative gain and tune more to get a smoother simulation. I mainly concentrated on implementing twiddle and watch it in action. 
+
+Twiddle is set to constantly tune, if cross-track error is less than a threshold. The way I implemented twiddle, I could leave the simulation running overnight and hope there is a “perfect” PID for the track at a given speed. 
+
